@@ -1,0 +1,11 @@
+<h3>How to use pipes.</h3>
+
+<input type="text" [(ngModel)]="search" >
+
+<ul>
+    <li *ngFor="let item of items | custom : search">
+        {{item}}
+    </li>
+</ul>
+
+<h4 *ngIf="(items | custom : search).length == 0">No reference found to: {{search}}</h4>
